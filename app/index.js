@@ -1,18 +1,26 @@
+//#region helpful constants
+const choiceId1 = "choice1";
+const choiceId2 = "choice2";
+const choiceId3 = "choice3";
+//#endregion helpful constants
+
+//#region get elements from the HTML
 let ButtonChoice1 = document.getElementById("choice1");
 let ButtonChoice2 = document.getElementById("choice2");
 let ButtonChoice3 = document.getElementById("choice3");
+//#endregion get elements from the HTML
 
-function Choice1Action() {
-    alert("choice 1 clicked");
-}
-ButtonChoice1.addEventListener("click", Choice1Action, false);
+// get correct choice
+// get the text for the button chosen
+// verify correctness
+// update accuracy
+function ChoiceAction(event) {
+    // get the clicked button
+    // event.currentTarget returns the element clicked (the button in this event)
+    const choiceButton = event.currentTarget;
 
-function Choice2Action() {
-    alert("choice 2 clicked");
+    alert(`${choiceButton.id} clicked`);
 }
-ButtonChoice2.addEventListener("click", Choice2Action, false);
-
-function Choice3Action() {
-    alert("choice 3 clicked");
-}
-ButtonChoice3.addEventListener("click", Choice3Action, false);
+ButtonChoice1.addEventListener("click", ChoiceAction, false);
+ButtonChoice2.addEventListener("click", ChoiceAction, false);
+ButtonChoice3.addEventListener("click", ChoiceAction, false);
