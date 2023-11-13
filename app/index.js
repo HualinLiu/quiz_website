@@ -2,14 +2,15 @@
 const choiceId1 = "choice1";
 const choiceId2 = "choice2";
 const choiceId3 = "choice3";
+const imageId = "animal_picture";
 //#endregion helpful constants
 
 //#region get elements from the HTML
-const ButtonChoice1 = document.getElementById("choice1");
-const ButtonChoice2 = document.getElementById("choice2");
-const ButtonChoice3 = document.getElementById("choice3");
+const ButtonChoice1 = document.getElementById(choiceId1);
+const ButtonChoice2 = document.getElementById(choiceId2);
+const ButtonChoice3 = document.getElementById(choiceId3);
 
-const AnimalImage = document.getElementById("animal_picture");
+const AnimalImage = document.getElementById(imageId);
 //#endregion get elements from the HTML
 
 //#region quiz state variables
@@ -43,5 +44,4 @@ function ChangeImage() {}
 // create a whole new question
 // new set of choices
 // new animal picture
-// update accuracy
 function NewQuestion() {}
