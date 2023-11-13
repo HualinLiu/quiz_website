@@ -5,10 +5,22 @@ const choiceId3 = "choice3";
 //#endregion helpful constants
 
 //#region get elements from the HTML
-let ButtonChoice1 = document.getElementById("choice1");
-let ButtonChoice2 = document.getElementById("choice2");
-let ButtonChoice3 = document.getElementById("choice3");
+const ButtonChoice1 = document.getElementById("choice1");
+const ButtonChoice2 = document.getElementById("choice2");
+const ButtonChoice3 = document.getElementById("choice3");
+
+const AnimalImage = document.getElementById("animal_picture");
 //#endregion get elements from the HTML
+
+//#region quiz state variables
+let accuracy = -1; // -1 means first question
+//#endregion quiz state variables
+
+// set the choices shown on the document
+function SetChoices() {}
+
+// update the accuracy
+function UpdateAccuracy() {}
 
 // get correct choice
 // get the text for the button chosen
@@ -24,3 +36,12 @@ function ChoiceAction(event) {
 ButtonChoice1.addEventListener("click", ChoiceAction, false);
 ButtonChoice2.addEventListener("click", ChoiceAction, false);
 ButtonChoice3.addEventListener("click", ChoiceAction, false);
+
+// update the document with a new image
+function ChangeImage() {}
+
+// create a whole new question
+// new set of choices
+// new animal picture
+// update accuracy
+function NewQuestion() {}
