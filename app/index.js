@@ -3,25 +3,38 @@ const choiceId1 = "choice1";
 const choiceId2 = "choice2";
 const choiceId3 = "choice3";
 const imageId = "animal_picture";
+const accuracyId = "accuracy";
 //#endregion helpful constants
 
 //#region get elements from the HTML
 const ButtonChoice1 = document.getElementById(choiceId1);
 const ButtonChoice2 = document.getElementById(choiceId2);
 const ButtonChoice3 = document.getElementById(choiceId3);
-
 const AnimalImage = document.getElementById(imageId);
+const AccuracyElement = document.getElementById(accuracyId);
 //#endregion get elements from the HTML
 
 //#region quiz state variables
-let accuracy = -1; // -1 means first question
+let questions_correct = 0;
+let questions_attempted = 0;
 //#endregion quiz state variables
 
 // set the choices shown on the document
 function SetChoices() {}
 
 // update the accuracy
-function UpdateAccuracy() {}
+function UpdateAccuracy(correct) {
+    // update statistics
+    questions_attempted++;
+    if (correct) {
+        questions_correct++;
+    }
+
+    // update element to be accuracy as a percentage
+    AccuracyElement.textContent = `${Math.round(
+        (questions_correct / questions_attempted) * 100
+    )}%`;
+}
 
 // get correct choice
 // get the text for the button chosen
