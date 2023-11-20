@@ -1,25 +1,24 @@
 //#region The question
-const question = "What is the animal in the picture?"
+const question = "What is the animal in the picture?";
 //#region The question
 
-const animals = ["Panda", "Lion", "Penguin", "Shark", "Cat", "Dinosaur", "rabbit"];
-
-//#region helpful constants
-const choiceId1 = "choice1";
-const choiceId2 = "choice2";
-const choiceId3 = "choice3";
-const imageId = "animal_picture";
-const accuracyId = "accuracy";
-const questionId = "question";
-//#endregion helpful constants
+const animals = [
+    "Panda",
+    "Lion",
+    "Penguin",
+    "Shark",
+    "Cat",
+    "Dinosaur",
+    "rabbit",
+];
 
 //#region get elements from the HTML
-const ButtonChoice1 = document.getElementById(choiceId1);
-const ButtonChoice2 = document.getElementById(choiceId2);
-const ButtonChoice3 = document.getElementById(choiceId3);
-const AnimalImage = document.getElementById(imageId);
-const AccuracyElement = document.getElementById(accuracyId);
-const questionTest = document.getElementById(questionId);
+const ButtonChoice1 = document.getElementById("choice1");
+const ButtonChoice2 = document.getElementById("choice2");
+const ButtonChoice3 = document.getElementById("choice3");
+const AnimalImage = document.getElementById("animal_picture");
+const AccuracyElement = document.getElementById("accuracy");
+const questionTest = document.getElementById("question");
 //#endregion get elements from the HTML
 
 //#region quiz state variables
@@ -31,7 +30,7 @@ let questions_attempted = 0;
 function SetChoices() {
     ButtonChoice1.textContent = "cat";
     ButtonChoice2.textContent = "tiger";
-    ButtonChoice3.textContent = "lion"
+    ButtonChoice3.textContent = "lion";
     questionTest.textContent = question;
 }
 SetChoices();
