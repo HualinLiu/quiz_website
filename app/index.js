@@ -1,9 +1,16 @@
+//#region The question
+const question = "What is the animal in the picture?"
+//#region The question
+
+const animals = ["Panda", "Lion", "Penguin", "Shark", "Cat", "Dinosaur", "rabbit"];
+
 //#region helpful constants
 const choiceId1 = "choice1";
 const choiceId2 = "choice2";
 const choiceId3 = "choice3";
 const imageId = "animal_picture";
 const accuracyId = "accuracy";
+const questionId = "question";
 //#endregion helpful constants
 
 //#region get elements from the HTML
@@ -12,6 +19,7 @@ const ButtonChoice2 = document.getElementById(choiceId2);
 const ButtonChoice3 = document.getElementById(choiceId3);
 const AnimalImage = document.getElementById(imageId);
 const AccuracyElement = document.getElementById(accuracyId);
+const questionTest = document.getElementById(questionId);
 //#endregion get elements from the HTML
 
 //#region quiz state variables
@@ -20,8 +28,13 @@ let questions_attempted = 0;
 //#endregion quiz state variables
 
 // set the choices shown on the document
-function SetChoices() {}
-
+function SetChoices() {
+    ButtonChoice1.textContent = "cat";
+    ButtonChoice2.textContent = "tiger";
+    ButtonChoice3.textContent = "lion"
+    questionTest.textContent = question;
+}
+SetChoices();
 // update the accuracy
 function UpdateAccuracy(correct) {
     // update statistics
