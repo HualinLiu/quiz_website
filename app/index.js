@@ -64,7 +64,10 @@ ButtonChoice2.addEventListener("click", ChoiceAction, false);
 ButtonChoice3.addEventListener("click", ChoiceAction, false);
 
 // update the document with a new image
-function ChangeImage() {}
+function SetImage(animal) {
+    AnimalImage.setAttribute("src", `images/${animal.toLowerCase()}.jpg`);
+}
+SetImage("Shark");
 
 // create a whole new question
 // new set of choices
